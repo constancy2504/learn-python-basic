@@ -33,7 +33,7 @@ f = dict(
     Age = 33,
     Grade = 'A',
     Status = True
-)
+) 
 
 print('a : ', type(a), a)
 print('b : ', type(b), b)
@@ -51,3 +51,76 @@ print('b :', b[0])
 print('b :', b.get(0))
 print('f : ', f.get('City'))
 print('f : ', f.get('Age'))
+print()
+
+
+# 딕셔너리 추가
+a['address'] = 'seoul'
+print('a : ' , a)
+print()
+
+a['rank'] = [1,2,3]
+print('a : ' , a)
+
+# 딕셔너리 키의 갯수 세기
+print('a : ', len(a))
+print('a : ', len(b))
+print('a : ', len(c))
+print('a : ', len(d))
+print()
+
+#dict_keys, dict_values, dict_items : 반복문(__iter__)에서 사용 가능
+
+print('a : ', list(a.keys()))
+print('b : ', list(b.keys()))
+print('c : ', c.keys())
+print('d : ', d.keys())
+
+
+print()
+
+print('a :', a.values())
+print('b :', b.values())
+print('c :', c.values())
+
+print()
+
+print('a :', a.items())
+print('b :', b.items())
+print('c :', c.items())
+
+print();
+
+print('a :', list(a.items()))
+print('b :', list(b.items()))
+print('c :', list(c.items()))
+
+print();
+
+print('a : ', a)
+print('a : ', a.pop('name'))
+print('a : ', a)
+
+print()
+
+print('f : ' , f)
+print('f : ', f.popitem()) # 아무거나 임의대로 꺼내옴 , 그리고 status는 없어짐
+print('f : ' , f)
+print('f : ', f.popitem()) # 아무거나 임의대로 꺼내옴 , 그리고 status는 없어짐
+print('f : ' , f)
+
+print()
+
+print('a : ', 'birth' in a) # 해당 키가 존재하는지 여부 // True
+print('a : ', 'birth2' in a) # 해당 키가 존재하는지 여부 // False
+print('a : ', 'address' in a) # 해당 키가 존재하는지 여부 // True
+print('a : ', 'Address' in a) # 대소문자 구분
+print()
+
+#수정 다른방법
+print('a : ', a)
+
+a.update(birth='910904');
+temp = {'address': 'Busan'}
+a.update(temp)
+print('a : ', a)
